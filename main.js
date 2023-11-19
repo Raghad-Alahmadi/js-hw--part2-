@@ -54,15 +54,11 @@ console.log(intNum + 1);
 const number5 = Math.trunc(4.16)
 console.log(number5);
 
-/*
-
-const num3 = 3
-const isInt = num3.isInteger(num3)
+//
+const num3 = 3;
+const isInt = Number.isInteger(num3);
 console.log(isInt);
-
-
-*/
-
+//
 
 function sqr(num){
     if(isNaN(num))
@@ -243,11 +239,11 @@ const sqrNumber = ages.map(function(e){
 })
 console.log(sqrNumber)
 
-/*
+
 const strColors1 = 'red ; green ; blue ; black'
-const arrColors = strColors1.spilt()
+const arrColors = strColors1.split(';');
 console.log(arrColors);
-*/
+
 
 
 
@@ -309,16 +305,16 @@ console.log(carr.numOfCars)
 
 //
 
-/*
 class Animal {
-    constructor9=(name, color){
-        this.name = name
-        this.color = color
-        this.speed = 0
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+        this.speed = 0;
     }
-    run(speed){
-        this.speed = speed
-        return `${this.name} runs with speed ${this.speed}`
+
+    run(speed) {
+        this.speed = speed;
+        return `${this.name} runs with speed ${this.speed}`;
     }
 }
 
@@ -338,16 +334,20 @@ const catt = new cat('snowy','white')
 console.log(catt)
 catt.makesound()
 
-*/
+
 
 
 let user2 = {
     fName: "Asmaa",
     lName: "Mohamed"
-}
+};
 
+let user1 = {
+    fName: "Raghad",
+    lName: "Alahmadi"
+};
 let printFullName = function(age){
-    console.log("Hello, " + this.fName+ " " + this.lName + " . your age is: " + age);
+    console.log("Hello, " + this.fName + " " + this.lName + ". Your age is: " + age);
 }
 
 printFullName.call(user1, "25");
@@ -356,8 +356,8 @@ printFullName.call(user2, "20");
 printFullName.apply(user1, [25]);
 printFullName.apply(user2, [20]);
 
-let newfun = printFullName.bind(user1)
-newfun("25")
+let newfun = printFullName.bind(user1);
+newfun("25");
 
 
 ///
@@ -416,7 +416,7 @@ console.log(area2)
 
 //
 
-let studends = function(name1, name2, ...names, name3){
+let studends = function(name1, name2, names, ...name3){
     console.log(name1, name2, names, name3)
 }
 
